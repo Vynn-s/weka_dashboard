@@ -1,6 +1,7 @@
 {
   "dataset": {
-    "name": "WA_Fn-UseC_-HR-Employee-Attrition",
+    "name": "IBM_HR_Attrition_Preprocessed.csv",
+    "relation": "WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.Remove-R9-10,22,27",
     "instances": 1470,
     "attributes": 31,
     "className": "Attrition",
@@ -10,100 +11,132 @@
     {
       "id": "j48",
       "algorithm": "J48 Decision Tree",
+      "sourceFile": "J48",
       "scheme": "weka.classifiers.trees.J48 -C 0.25 -M 2",
       "testMode": "10-fold cross-validation",
-      "buildTimeSeconds": 0.02,
+      "buildTimeSeconds": 0.14,
       "metrics": {
-        "accuracy": 83.8776,
-        "precision": null,
-        "recall": 0.839,
-        "f1Score": null,
-        "rocArea": 0.495,
-        "kappaStatistic": 0,
-        "meanAbsoluteError": 0.2705,
-        "rootMeanSquaredError": 0.3677
+        "accuracy": 82.449,
+        "precision": 0.798,
+        "recall": 0.824,
+        "f1Score": 0.807,
+        "rocArea": 0.608,
+        "kappaStatistic": 0.2335,
+        "meanAbsoluteError": 0.2226,
+        "rootMeanSquaredError": 0.3938
       },
       "classMetrics": [
-        { "className": "Yes", "tpRate": 0, "fpRate": 0, "precision": null, "recall": 0, "f1Score": null, "rocArea": 0.495, "prcArea": 0.160 },
-        { "className": "No", "tpRate": 1, "fpRate": 1, "precision": 0.839, "recall": 1, "f1Score": 0.912, "rocArea": 0.495, "prcArea": 0.837 }
+        { "className": "Yes", "tpRate": 0.266, "fpRate": 0.068, "precision": 0.429, "recall": 0.266, "f1Score": 0.328, "mcc": 0.242, "rocArea": 0.608, "prcArea": 0.290 },
+        { "className": "No", "tpRate": 0.932, "fpRate": 0.734, "precision": 0.868, "recall": 0.932, "f1Score": 0.899, "mcc": 0.242, "rocArea": 0.608, "prcArea": 0.854 }
       ],
       "confusionMatrix": {
         "labels": ["Yes", "No"],
-        "matrix": [[0, 237], [0, 1233]]
+        "matrix": [[63, 174], [84, 1149]]
       }
     },
     {
       "id": "randomforest",
       "algorithm": "Random Forest",
+      "sourceFile": "RandomForest",
       "scheme": "weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1",
       "testMode": "10-fold cross-validation",
-      "buildTimeSeconds": 0.28,
+      "buildTimeSeconds": 0.5,
       "metrics": {
-        "accuracy": 83.8776,
-        "precision": null,
-        "recall": 0.839,
-        "f1Score": null,
-        "rocArea": 0.627,
-        "kappaStatistic": 0,
-        "meanAbsoluteError": 0.2649,
-        "rootMeanSquaredError": 0.3621
+        "accuracy": 85.8503,
+        "precision": 0.858,
+        "recall": 0.859,
+        "f1Score": 0.814,
+        "rocArea": 0.783,
+        "kappaStatistic": 0.2144,
+        "meanAbsoluteError": 0.2274,
+        "rootMeanSquaredError": 0.3295
       },
       "classMetrics": [
-        { "className": "Yes", "tpRate": 0, "fpRate": 0, "precision": null, "recall": 0, "f1Score": null, "rocArea": 0.627, "prcArea": 0.254 },
-        { "className": "No", "tpRate": 1, "fpRate": 1, "precision": 0.839, "recall": 1, "f1Score": 0.912, "rocArea": 0.627, "prcArea": 0.885 }
+        { "className": "Yes", "tpRate": 0.148, "fpRate": 0.005, "precision": 0.854, "recall": 0.148, "f1Score": 0.252, "mcc": 0.319, "rocArea": 0.783, "prcArea": 0.524 },
+        { "className": "No", "tpRate": 0.995, "fpRate": 0.852, "precision": 0.859, "recall": 0.995, "f1Score": 0.922, "mcc": 0.319, "rocArea": 0.783, "prcArea": 0.936 }
       ],
       "confusionMatrix": {
         "labels": ["Yes", "No"],
-        "matrix": [[0, 237], [0, 1233]]
+        "matrix": [[35, 202], [6, 1227]]
       }
     },
     {
       "id": "logistic",
       "algorithm": "Logistic Regression",
+      "sourceFile": "Logistic",
       "scheme": "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4",
       "testMode": "10-fold cross-validation",
-      "buildTimeSeconds": 11.66,
+      "buildTimeSeconds": 0.22,
       "metrics": {
-        "accuracy": 81.9048,
-        "precision": 0.748,
-        "recall": 0.819,
-        "f1Score": 0.771,
-        "rocArea": 0.621,
-        "kappaStatistic": 0.0396,
-        "meanAbsoluteError": 0.1817,
-        "rootMeanSquaredError": 0.4181
+        "accuracy": 88.0952,
+        "precision": 0.869,
+        "recall": 0.881,
+        "f1Score": 0.868,
+        "rocArea": 0.835,
+        "kappaStatistic": 0.4727,
+        "meanAbsoluteError": 0.1829,
+        "rootMeanSquaredError": 0.3059
       },
       "classMetrics": [
-        { "className": "Yes", "tpRate": 0.063, "fpRate": 0.036, "precision": 0.254, "recall": 0.063, "f1Score": 0.101, "rocArea": 0.621, "prcArea": 0.234 },
-        { "className": "No", "tpRate": 0.964, "fpRate": 0.937, "precision": 0.843, "recall": 0.964, "f1Score": 0.899, "rocArea": 0.621, "prcArea": 0.869 }
+        { "className": "Yes", "tpRate": 0.426, "fpRate": 0.032, "precision": 0.721, "recall": 0.426, "f1Score": 0.536, "mcc": 0.494, "rocArea": 0.835, "prcArea": 0.624 },
+        { "className": "No", "tpRate": 0.968, "fpRate": 0.574, "precision": 0.898, "recall": 0.968, "f1Score": 0.932, "mcc": 0.494, "rocArea": 0.835, "prcArea": 0.953 }
       ],
       "confusionMatrix": {
         "labels": ["Yes", "No"],
-        "matrix": [[15, 222], [44, 1189]]
+        "matrix": [[101, 136], [39, 1194]]
       }
     },
     {
-      "id": "kmeans",
-      "algorithm": "Simple K-Means",
-      "scheme": "weka.clusterers.SimpleKMeans -N 2 -I 500 -S 10",
-      "testMode": "evaluate on training data",
-      "buildTimeSeconds": 0.03,
+      "id": "smo",
+      "algorithm": "SMO",
+      "sourceFile": "SMO",
+      "scheme": "weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K PolyKernel -E 1.0",
+      "testMode": "10-fold cross-validation",
+      "buildTimeSeconds": 0.48,
       "metrics": {
-        "accuracy": null,
-        "precision": null,
-        "recall": null,
-        "f1Score": null,
-        "rocArea": null,
-        "kappaStatistic": null,
-        "meanAbsoluteError": null,
-        "rootMeanSquaredError": null,
-        "withinClusterSSE": 27783,
-        "iterations": 4
+        "accuracy": 87.7551,
+        "precision": 0.866,
+        "recall": 0.878,
+        "f1Score": 0.859,
+        "rocArea": 0.670,
+        "kappaStatistic": 0.4284,
+        "meanAbsoluteError": 0.1224,
+        "rootMeanSquaredError": 0.3499
       },
-      "clusterDistribution": [
-        { "cluster": "Cluster 0", "count": 887, "percentage": 60 },
-        { "cluster": "Cluster 1", "count": 583, "percentage": 40 }
-      ]
+      "classMetrics": [
+        { "className": "Yes", "tpRate": 0.363, "fpRate": 0.024, "precision": 0.748, "recall": 0.363, "f1Score": 0.489, "mcc": 0.465, "rocArea": 0.670, "prcArea": 0.374 },
+        { "className": "No", "tpRate": 0.976, "fpRate": 0.637, "precision": 0.889, "recall": 0.976, "f1Score": 0.930, "mcc": 0.465, "rocArea": 0.670, "prcArea": 0.887 }
+      ],
+      "confusionMatrix": {
+        "labels": ["Yes", "No"],
+        "matrix": [[86, 151], [29, 1204]]
+      }
+    },
+    {
+      "id": "naivebayes",
+      "algorithm": "Naive Bayes",
+      "sourceFile": "NaiveBayes",
+      "scheme": "weka.classifiers.bayes.NaiveBayes",
+      "testMode": "10-fold cross-validation",
+      "buildTimeSeconds": 0.02,
+      "metrics": {
+        "accuracy": 78.8435,
+        "precision": 0.838,
+        "recall": 0.788,
+        "f1Score": 0.806,
+        "rocArea": 0.774,
+        "kappaStatistic": 0.3693,
+        "meanAbsoluteError": 0.2524,
+        "rootMeanSquaredError": 0.3874
+      },
+      "classMetrics": [
+        { "className": "Yes", "tpRate": 0.641, "fpRate": 0.183, "precision": 0.402, "recall": 0.641, "f1Score": 0.494, "mcc": 0.385, "rocArea": 0.774, "prcArea": 0.537 },
+        { "className": "No", "tpRate": 0.817, "fpRate": 0.359, "precision": 0.922, "recall": 0.817, "f1Score": 0.866, "mcc": 0.385, "rocArea": 0.774, "prcArea": 0.921 }
+      ],
+      "confusionMatrix": {
+        "labels": ["Yes", "No"],
+        "matrix": [[152, 85], [226, 1007]]
+      }
     }
   ]
 }

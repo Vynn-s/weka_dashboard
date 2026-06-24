@@ -1,7 +1,7 @@
 === Run information ===
 
 Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
-Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R9-10,22,27-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.Remove-R9-10,22,27
 Instances:    1470
 Attributes:   31
               ﻿Age
@@ -45,30 +45,30 @@ Bagging with 100 iterations and base learner
 
 weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
 
-Time taken to build model: 0.28 seconds
+Time taken to build model: 0.5 seconds
 
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances        1233               83.8776 %
-Incorrectly Classified Instances       237               16.1224 %
-Kappa statistic                          0     
-Mean absolute error                      0.2649
-Root mean squared error                  0.3621
-Relative absolute error                 97.8005 %
-Root relative squared error             98.465  %
+Correctly Classified Instances        1262               85.8503 %
+Incorrectly Classified Instances       208               14.1497 %
+Kappa statistic                          0.2144
+Mean absolute error                      0.2274
+Root mean squared error                  0.3295
+Relative absolute error                 83.9833 %
+Root relative squared error             89.5927 %
 Total Number of Instances             1470     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.000    0.000    ?          0.000    ?          ?        0.627     0.254     Yes
-                 1.000    1.000    0.839      1.000    0.912      ?        0.627     0.885     No
-Weighted Avg.    0.839    0.839    ?          0.839    ?          ?        0.627     0.783     
+                 0.148    0.005    0.854      0.148    0.252      0.319    0.783     0.524     Yes
+                 0.995    0.852    0.859      0.995    0.922      0.319    0.783     0.936     No
+Weighted Avg.    0.859    0.716    0.858      0.859    0.814      0.319    0.783     0.869     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
-    0  237 |    a = Yes
-    0 1233 |    b = No
+   35  202 |    a = Yes
+    6 1227 |    b = No
 

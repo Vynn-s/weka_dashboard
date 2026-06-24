@@ -1,0 +1,263 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.Remove-R9-10,22,27
+Instances:    1470
+Attributes:   31
+              ﻿Age
+              Attrition
+              BusinessTravel
+              DailyRate
+              Department
+              DistanceFromHome
+              Education
+              EducationField
+              EnvironmentSatisfaction
+              Gender
+              HourlyRate
+              JobInvolvement
+              JobLevel
+              JobRole
+              JobSatisfaction
+              MaritalStatus
+              MonthlyIncome
+              MonthlyRate
+              NumCompaniesWorked
+              OverTime
+              PercentSalaryHike
+              PerformanceRating
+              RelationshipSatisfaction
+              StockOptionLevel
+              TotalWorkingYears
+              TrainingTimesLastYear
+              WorkLifeBalance
+              YearsAtCompany
+              YearsInCurrentRole
+              YearsSinceLastPromotion
+              YearsWithCurrManager
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                   Class
+Attribute                            Yes         No
+                                  (0.16)     (0.84)
+====================================================
+﻿Age
+  mean                            33.6076    37.5612
+  std. dev.                        9.6689     8.8848
+  weight sum                          237       1233
+  precision                             1          1
+
+BusinessTravel
+  Travel_Rarely                     157.0      888.0
+  Travel_Frequently                  70.0      209.0
+  Non-Travel                         13.0      139.0
+  [total]                           240.0     1236.0
+
+DailyRate
+  mean                           750.3684   812.4993
+  std. dev.                      401.0805   403.0785
+  weight sum                          237       1233
+  precision                        1.5785     1.5785
+
+Department
+  Sales                              93.0      355.0
+  Research & Development            134.0      829.0
+  Human Resources                    13.0       52.0
+  [total]                           240.0     1236.0
+
+DistanceFromHome
+  mean                            10.6329     8.9157
+  std. dev.                        8.4347     8.0094
+  weight sum                          237       1233
+  precision                             1          1
+
+Education
+  mean                             2.8397      2.927
+  std. dev.                        1.0061     1.0266
+  weight sum                          237       1233
+  precision                             1          1
+
+EducationField
+  Life Sciences                      90.0      518.0
+  Other                              12.0       72.0
+  Medical                            64.0      402.0
+  Marketing                          36.0      125.0
+  Technical Degree                   33.0      101.0
+  Human Resources                     8.0       21.0
+  [total]                           243.0     1239.0
+
+EnvironmentSatisfaction
+  mean                             2.4641     2.7713
+  std. dev.                        1.1673     1.0707
+  weight sum                          237       1233
+  precision                             1          1
+
+Gender
+  Female                             88.0      502.0
+  Male                              151.0      733.0
+  [total]                           239.0     1235.0
+
+HourlyRate
+  mean                            65.5738    65.9521
+  std. dev.                       20.0575    20.3725
+  weight sum                          237       1233
+  precision                             1          1
+
+JobInvolvement
+  mean                              2.519     2.7705
+  std. dev.                        0.7718     0.6918
+  weight sum                          237       1233
+  precision                             1          1
+
+JobLevel
+  mean                             1.6371      2.146
+  std. dev.                        0.9386     1.1175
+  weight sum                          237       1233
+  precision                             1          1
+
+JobRole
+  Sales Executive                    58.0      270.0
+  Research Scientist                 48.0      246.0
+  Laboratory Technician              63.0      198.0
+  Manufacturing Director             11.0      136.0
+  Healthcare Representative          10.0      123.0
+  Manager                             6.0       98.0
+  Sales Representative               34.0       51.0
+  Research Director                   3.0       79.0
+  Human Resources                    13.0       41.0
+  [total]                           246.0     1242.0
+
+JobSatisfaction
+  mean                             2.4684     2.7786
+  std. dev.                        1.1157     1.0928
+  weight sum                          237       1233
+  precision                             1          1
+
+MaritalStatus
+  Single                            121.0      351.0
+  Married                            85.0      590.0
+  Divorced                           34.0      295.0
+  [total]                           240.0     1236.0
+
+MonthlyIncome
+  mean                          4787.0283  6832.7411
+  std. dev.                     3632.5138  4816.2629
+  weight sum                          237       1233
+  precision                       14.0875    14.0875
+
+MonthlyRate
+  mean                         14558.9777 14265.9922
+  std. dev.                     7193.4546  7099.1801
+  weight sum                          237       1233
+  precision                       17.4649    17.4649
+
+NumCompaniesWorked
+  mean                             2.9409     2.6456
+  std. dev.                        2.6729     2.4591
+  weight sum                          237       1233
+  precision                             1          1
+
+OverTime
+  Yes                               128.0      290.0
+  No                                111.0      945.0
+  [total]                           239.0     1235.0
+
+PercentSalaryHike
+  mean                             15.097    15.2311
+  std. dev.                        3.7623      3.638
+  weight sum                          237       1233
+  precision                             1          1
+
+PerformanceRating
+  mean                             3.1561     3.1533
+  std. dev.                         0.363     0.3603
+  weight sum                          237       1233
+  precision                             1          1
+
+RelationshipSatisfaction
+  mean                             2.5992      2.734
+  std. dev.                        1.1231     1.0712
+  weight sum                          237       1233
+  precision                             1          1
+
+StockOptionLevel
+  mean                             0.5274     0.8451
+  std. dev.                        0.8546     0.8416
+  weight sum                          237       1233
+  precision                             1          1
+
+TotalWorkingYears
+  mean                             8.3869    12.0082
+  std. dev.                        7.1533      7.664
+  weight sum                          237       1233
+  precision                        1.0256     1.0256
+
+TrainingTimesLastYear
+  mean                             2.6245     2.8329
+  std. dev.                        1.2521     1.2931
+  weight sum                          237       1233
+  precision                             1          1
+
+WorkLifeBalance
+  mean                             2.6582      2.781
+  std. dev.                        0.8147     0.6816
+  weight sum                          237       1233
+  precision                             1          1
+
+YearsAtCompany
+  mean                             5.1664     7.3344
+  std. dev.                        5.9139     6.0891
+  weight sum                          237       1233
+  precision                        1.1111     1.1111
+
+YearsInCurrentRole
+  mean                              2.903     4.4842
+  std. dev.                        3.1681     3.6479
+  weight sum                          237       1233
+  precision                             1          1
+
+YearsSinceLastPromotion
+  mean                             1.9451     2.2344
+  std. dev.                        3.1464     3.2335
+  weight sum                          237       1233
+  precision                             1          1
+
+YearsWithCurrManager
+  mean                             2.8523     4.3674
+  std. dev.                        3.1367     3.5927
+  weight sum                          237       1233
+  precision                             1          1
+
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1159               78.8435 %
+Incorrectly Classified Instances       311               21.1565 %
+Kappa statistic                          0.3693
+Mean absolute error                      0.2524
+Root mean squared error                  0.3874
+Relative absolute error                 93.1851 %
+Root relative squared error            105.3327 %
+Total Number of Instances             1470     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.641    0.183    0.402      0.641    0.494      0.385    0.774     0.537     Yes
+                 0.817    0.359    0.922      0.817    0.866      0.385    0.774     0.921     No
+Weighted Avg.    0.788    0.330    0.838      0.788    0.806      0.385    0.774     0.859     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  152   85 |    a = Yes
+  226 1007 |    b = No
+

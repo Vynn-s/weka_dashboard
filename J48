@@ -1,0 +1,190 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.Remove-R9-10,22,27
+Instances:    1470
+Attributes:   31
+              ﻿Age
+              Attrition
+              BusinessTravel
+              DailyRate
+              Department
+              DistanceFromHome
+              Education
+              EducationField
+              EnvironmentSatisfaction
+              Gender
+              HourlyRate
+              JobInvolvement
+              JobLevel
+              JobRole
+              JobSatisfaction
+              MaritalStatus
+              MonthlyIncome
+              MonthlyRate
+              NumCompaniesWorked
+              OverTime
+              PercentSalaryHike
+              PerformanceRating
+              RelationshipSatisfaction
+              StockOptionLevel
+              TotalWorkingYears
+              TrainingTimesLastYear
+              WorkLifeBalance
+              YearsAtCompany
+              YearsInCurrentRole
+              YearsSinceLastPromotion
+              YearsWithCurrManager
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+TotalWorkingYears <= 2
+|   OverTime = Yes
+|   |   MaritalStatus = Single
+|   |   |   TrainingTimesLastYear <= 5: Yes (17.0/1.0)
+|   |   |   TrainingTimesLastYear > 5: No (2.0)
+|   |   MaritalStatus = Married
+|   |   |   YearsSinceLastPromotion <= 0
+|   |   |   |   PercentSalaryHike <= 18: Yes (7.0)
+|   |   |   |   PercentSalaryHike > 18: No (3.0/1.0)
+|   |   |   YearsSinceLastPromotion > 0: No (2.0)
+|   |   MaritalStatus = Divorced: No (4.0/1.0)
+|   OverTime = No
+|   |   JobInvolvement <= 1: Yes (5.0)
+|   |   JobInvolvement > 1
+|   |   |   JobRole = Sales Executive: No (0.0)
+|   |   |   JobRole = Research Scientist: No (28.0/2.0)
+|   |   |   JobRole = Laboratory Technician
+|   |   |   |   ﻿Age <= 32
+|   |   |   |   |   WorkLifeBalance <= 2: Yes (7.0/1.0)
+|   |   |   |   |   WorkLifeBalance > 2
+|   |   |   |   |   |   Gender = Female: No (5.0)
+|   |   |   |   |   |   Gender = Male
+|   |   |   |   |   |   |   DistanceFromHome <= 8: Yes (5.0)
+|   |   |   |   |   |   |   DistanceFromHome > 8: No (4.0)
+|   |   |   |   ﻿Age > 32: No (8.0)
+|   |   |   JobRole = Manufacturing Director: No (0.0)
+|   |   |   JobRole = Healthcare Representative: No (0.0)
+|   |   |   JobRole = Manager: No (0.0)
+|   |   |   JobRole = Sales Representative
+|   |   |   |   WorkLifeBalance <= 2: Yes (4.0/1.0)
+|   |   |   |   WorkLifeBalance > 2
+|   |   |   |   |   DailyRate <= 495: Yes (4.0/1.0)
+|   |   |   |   |   DailyRate > 495: No (13.0/1.0)
+|   |   |   JobRole = Research Director: No (0.0)
+|   |   |   JobRole = Human Resources: Yes (5.0/1.0)
+TotalWorkingYears > 2
+|   OverTime = Yes
+|   |   MonthlyIncome <= 2468
+|   |   |   JobLevel <= 1
+|   |   |   |   YearsAtCompany <= 3: Yes (16.0)
+|   |   |   |   YearsAtCompany > 3
+|   |   |   |   |   DailyRate <= 722: Yes (8.0)
+|   |   |   |   |   DailyRate > 722
+|   |   |   |   |   |   WorkLifeBalance <= 1: Yes (2.0)
+|   |   |   |   |   |   WorkLifeBalance > 1
+|   |   |   |   |   |   |   DistanceFromHome <= 15
+|   |   |   |   |   |   |   |   YearsWithCurrManager <= 5: No (10.0)
+|   |   |   |   |   |   |   |   YearsWithCurrManager > 5
+|   |   |   |   |   |   |   |   |   TrainingTimesLastYear <= 2: Yes (2.0)
+|   |   |   |   |   |   |   |   |   TrainingTimesLastYear > 2: No (3.0)
+|   |   |   |   |   |   |   DistanceFromHome > 15: Yes (3.0)
+|   |   |   JobLevel > 1: No (3.0)
+|   |   MonthlyIncome > 2468
+|   |   |   EnvironmentSatisfaction <= 2
+|   |   |   |   NumCompaniesWorked <= 5
+|   |   |   |   |   JobSatisfaction <= 3
+|   |   |   |   |   |   EducationField = Life Sciences
+|   |   |   |   |   |   |   JobInvolvement <= 1: Yes (4.0)
+|   |   |   |   |   |   |   JobInvolvement > 1
+|   |   |   |   |   |   |   |   Gender = Female
+|   |   |   |   |   |   |   |   |   YearsWithCurrManager <= 5: Yes (8.0/1.0)
+|   |   |   |   |   |   |   |   |   YearsWithCurrManager > 5: No (2.0)
+|   |   |   |   |   |   |   |   Gender = Male
+|   |   |   |   |   |   |   |   |   RelationshipSatisfaction <= 1: Yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   RelationshipSatisfaction > 1: No (9.0/1.0)
+|   |   |   |   |   |   EducationField = Other: No (3.0)
+|   |   |   |   |   |   EducationField = Medical: No (21.0/2.0)
+|   |   |   |   |   |   EducationField = Marketing
+|   |   |   |   |   |   |   JobInvolvement <= 2: Yes (3.0)
+|   |   |   |   |   |   |   JobInvolvement > 2
+|   |   |   |   |   |   |   |   DistanceFromHome <= 6: No (3.0)
+|   |   |   |   |   |   |   |   DistanceFromHome > 6: Yes (2.0)
+|   |   |   |   |   |   EducationField = Technical Degree: Yes (4.0/1.0)
+|   |   |   |   |   |   EducationField = Human Resources: No (0.0)
+|   |   |   |   |   JobSatisfaction > 3
+|   |   |   |   |   |   JobInvolvement <= 1
+|   |   |   |   |   |   |   JobLevel <= 1: Yes (2.0)
+|   |   |   |   |   |   |   JobLevel > 1: No (3.0)
+|   |   |   |   |   |   JobInvolvement > 1: No (28.0/1.0)
+|   |   |   |   NumCompaniesWorked > 5
+|   |   |   |   |   RelationshipSatisfaction <= 3: Yes (12.0/1.0)
+|   |   |   |   |   RelationshipSatisfaction > 3
+|   |   |   |   |   |   Gender = Female: No (4.0)
+|   |   |   |   |   |   Gender = Male: Yes (4.0/1.0)
+|   |   |   EnvironmentSatisfaction > 2
+|   |   |   |   MaritalStatus = Single
+|   |   |   |   |   YearsSinceLastPromotion <= 5
+|   |   |   |   |   |   TotalWorkingYears <= 9
+|   |   |   |   |   |   |   JobSatisfaction <= 3
+|   |   |   |   |   |   |   |   MonthlyRate <= 8053: No (5.0)
+|   |   |   |   |   |   |   |   MonthlyRate > 8053: Yes (13.0/3.0)
+|   |   |   |   |   |   |   JobSatisfaction > 3: No (7.0)
+|   |   |   |   |   |   TotalWorkingYears > 9: No (25.0)
+|   |   |   |   |   YearsSinceLastPromotion > 5: Yes (9.0/2.0)
+|   |   |   |   MaritalStatus = Married: No (99.0/9.0)
+|   |   |   |   MaritalStatus = Divorced
+|   |   |   |   |   WorkLifeBalance <= 1
+|   |   |   |   |   |   DailyRate <= 478: No (2.0)
+|   |   |   |   |   |   DailyRate > 478: Yes (2.0)
+|   |   |   |   |   WorkLifeBalance > 1
+|   |   |   |   |   |   DistanceFromHome <= 18: No (52.0)
+|   |   |   |   |   |   DistanceFromHome > 18
+|   |   |   |   |   |   |   Gender = Female: No (3.0)
+|   |   |   |   |   |   |   Gender = Male: Yes (2.0)
+|   OverTime = No
+|   |   WorkLifeBalance <= 1
+|   |   |   YearsWithCurrManager <= 0: Yes (7.0/2.0)
+|   |   |   YearsWithCurrManager > 0
+|   |   |   |   YearsSinceLastPromotion <= 6: No (40.0/4.0)
+|   |   |   |   YearsSinceLastPromotion > 6
+|   |   |   |   |   JobSatisfaction <= 2: No (2.0)
+|   |   |   |   |   JobSatisfaction > 2: Yes (4.0)
+|   |   WorkLifeBalance > 1: No (913.0/68.0)
+
+Number of Leaves  : 	64
+
+Size of the tree : 	114
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1212               82.449  %
+Incorrectly Classified Instances       258               17.551  %
+Kappa statistic                          0.2335
+Mean absolute error                      0.2226
+Root mean squared error                  0.3938
+Relative absolute error                 82.1962 %
+Root relative squared error            107.091  %
+Total Number of Instances             1470     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.266    0.068    0.429      0.266    0.328      0.242    0.608     0.290     Yes
+                 0.932    0.734    0.868      0.932    0.899      0.242    0.608     0.854     No
+Weighted Avg.    0.824    0.627    0.798      0.824    0.807      0.242    0.608     0.763     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+   63  174 |    a = Yes
+   84 1149 |    b = No
+

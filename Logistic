@@ -1,0 +1,180 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.Remove-R9-10,22,27
+Instances:    1470
+Attributes:   31
+              ﻿Age
+              Attrition
+              BusinessTravel
+              DailyRate
+              Department
+              DistanceFromHome
+              Education
+              EducationField
+              EnvironmentSatisfaction
+              Gender
+              HourlyRate
+              JobInvolvement
+              JobLevel
+              JobRole
+              JobSatisfaction
+              MaritalStatus
+              MonthlyIncome
+              MonthlyRate
+              NumCompaniesWorked
+              OverTime
+              PercentSalaryHike
+              PerformanceRating
+              RelationshipSatisfaction
+              StockOptionLevel
+              TotalWorkingYears
+              TrainingTimesLastYear
+              WorkLifeBalance
+              YearsAtCompany
+              YearsInCurrentRole
+              YearsSinceLastPromotion
+              YearsWithCurrManager
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                             Class
+Variable                                       Yes
+==================================================
+﻿Age                                     -0.0309
+BusinessTravel=Travel_Rarely               -0.0886
+BusinessTravel=Travel_Frequently            0.7911
+BusinessTravel=Non-Travel                  -1.1209
+DailyRate                                  -0.0003
+Department=Sales                            1.3375
+Department=Research & Development           1.5011
+Department=Human Resources                -15.1743
+DistanceFromHome                            0.0453
+Education                                   0.0039
+EducationField=Life Sciences               -0.1469
+EducationField=Other                       -0.2171
+EducationField=Medical                     -0.2387
+EducationField=Marketing                    0.2516
+EducationField=Technical Degree             0.7799
+EducationField=Human Resources              0.5869
+EnvironmentSatisfaction                    -0.4352
+Gender=Male                                 0.3974
+HourlyRate                                  0.0011
+JobInvolvement                             -0.5253
+JobLevel                                   -0.0842
+JobRole=Sales Executive                     -0.241
+JobRole=Research Scientist                  -0.897
+JobRole=Laboratory Technician               0.0505
+JobRole=Manufacturing Director               -1.21
+JobRole=Healthcare Representative          -1.4351
+JobRole=Manager                            -1.0801
+JobRole=Sales Representative                0.7123
+JobRole=Research Director                  -2.5258
+JobRole=Human Resources                    16.4967
+JobSatisfaction                            -0.4112
+MaritalStatus=Single                        0.6328
+MaritalStatus=Married                      -0.1936
+MaritalStatus=Divorced                     -0.5179
+MonthlyIncome                                    0
+MonthlyRate                                      0
+NumCompaniesWorked                          0.1953
+OverTime=No                                -1.9818
+PercentSalaryHike                          -0.0219
+PerformanceRating                           0.1266
+RelationshipSatisfaction                   -0.2567
+StockOptionLevel                           -0.2064
+TotalWorkingYears                          -0.0603
+TrainingTimesLastYear                      -0.1897
+WorkLifeBalance                            -0.3702
+YearsAtCompany                              0.0938
+YearsInCurrentRole                         -0.1484
+YearsSinceLastPromotion                     0.1735
+YearsWithCurrManager                       -0.1347
+Intercept                                   5.0802
+
+
+Odds Ratios...
+                                             Class
+Variable                                       Yes
+==================================================
+﻿Age                                      0.9696
+BusinessTravel=Travel_Rarely                0.9152
+BusinessTravel=Travel_Frequently            2.2058
+BusinessTravel=Non-Travel                    0.326
+DailyRate                                   0.9997
+Department=Sales                            3.8093
+Department=Research & Development           4.4864
+Department=Human Resources                       0
+DistanceFromHome                            1.0463
+Education                                   1.0039
+EducationField=Life Sciences                0.8634
+EducationField=Other                        0.8048
+EducationField=Medical                      0.7876
+EducationField=Marketing                    1.2861
+EducationField=Technical Degree             2.1813
+EducationField=Human Resources              1.7984
+EnvironmentSatisfaction                     0.6471
+Gender=Male                                  1.488
+HourlyRate                                  1.0011
+JobInvolvement                              0.5914
+JobLevel                                    0.9192
+JobRole=Sales Executive                     0.7858
+JobRole=Research Scientist                  0.4078
+JobRole=Laboratory Technician               1.0517
+JobRole=Manufacturing Director              0.2982
+JobRole=Healthcare Representative           0.2381
+JobRole=Manager                             0.3396
+JobRole=Sales Representative                2.0387
+JobRole=Research Director                     0.08
+JobRole=Human Resources              14601968.7529
+JobSatisfaction                             0.6628
+MaritalStatus=Single                        1.8829
+MaritalStatus=Married                        0.824
+MaritalStatus=Divorced                      0.5958
+MonthlyIncome                                    1
+MonthlyRate                                      1
+NumCompaniesWorked                          1.2157
+OverTime=No                                 0.1378
+PercentSalaryHike                           0.9783
+PerformanceRating                           1.1349
+RelationshipSatisfaction                    0.7736
+StockOptionLevel                            0.8135
+TotalWorkingYears                           0.9415
+TrainingTimesLastYear                       0.8272
+WorkLifeBalance                             0.6906
+YearsAtCompany                              1.0983
+YearsInCurrentRole                          0.8621
+YearsSinceLastPromotion                     1.1894
+YearsWithCurrManager                         0.874
+
+
+Time taken to build model: 0.22 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1295               88.0952 %
+Incorrectly Classified Instances       175               11.9048 %
+Kappa statistic                          0.4727
+Mean absolute error                      0.1829
+Root mean squared error                  0.3059
+Relative absolute error                 67.521  %
+Root relative squared error             83.1914 %
+Total Number of Instances             1470     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.426    0.032    0.721      0.426    0.536      0.494    0.835     0.624     Yes
+                 0.968    0.574    0.898      0.968    0.932      0.494    0.835     0.953     No
+Weighted Avg.    0.881    0.486    0.869      0.881    0.868      0.494    0.835     0.900     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  101  136 |    a = Yes
+   39 1194 |    b = No
+

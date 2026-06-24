@@ -1,0 +1,134 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.Remove-R9-10,22,27
+Instances:    1470
+Attributes:   31
+              ﻿Age
+              Attrition
+              BusinessTravel
+              DailyRate
+              Department
+              DistanceFromHome
+              Education
+              EducationField
+              EnvironmentSatisfaction
+              Gender
+              HourlyRate
+              JobInvolvement
+              JobLevel
+              JobRole
+              JobSatisfaction
+              MaritalStatus
+              MonthlyIncome
+              MonthlyRate
+              NumCompaniesWorked
+              OverTime
+              PercentSalaryHike
+              PerformanceRating
+              RelationshipSatisfaction
+              StockOptionLevel
+              TotalWorkingYears
+              TrainingTimesLastYear
+              WorkLifeBalance
+              YearsAtCompany
+              YearsInCurrentRole
+              YearsSinceLastPromotion
+              YearsWithCurrManager
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: Yes, No
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.8939 * (normalized) ﻿Age
+ +       0.0506 * (normalized) BusinessTravel=Travel_Rarely
+ +      -0.5138 * (normalized) BusinessTravel=Travel_Frequently
+ +       0.4632 * (normalized) BusinessTravel=Non-Travel
+ +       0.0689 * (normalized) DailyRate
+ +       0.094  * (normalized) Department=Sales
+ +       0.0141 * (normalized) Department=Research & Development
+ +      -0.108  * (normalized) Department=Human Resources
+ +      -0.7372 * (normalized) DistanceFromHome
+ +       0.0111 * (normalized) Education
+ +       0.0818 * (normalized) EducationField=Life Sciences
+ +       0.3839 * (normalized) EducationField=Other
+ +       0.3395 * (normalized) EducationField=Medical
+ +      -0.2175 * (normalized) EducationField=Marketing
+ +      -0.2782 * (normalized) EducationField=Technical Degree
+ +      -0.3096 * (normalized) EducationField=Human Resources
+ +       0.7803 * (normalized) EnvironmentSatisfaction
+ +      -0.1852 * (normalized) Gender=Male
+ +      -0.0834 * (normalized) HourlyRate
+ +       1.0131 * (normalized) JobInvolvement
+ +       0.4738 * (normalized) JobLevel
+ +      -0.2025 * (normalized) JobRole=Sales Executive
+ +       0.1241 * (normalized) JobRole=Research Scientist
+ +      -0.3667 * (normalized) JobRole=Laboratory Technician
+ +       0.2984 * (normalized) JobRole=Manufacturing Director
+ +       0.2103 * (normalized) JobRole=Healthcare Representative
+ +      -0.1908 * (normalized) JobRole=Manager
+ +      -0.6246 * (normalized) JobRole=Sales Representative
+ +       0.8597 * (normalized) JobRole=Research Director
+ +      -0.108  * (normalized) JobRole=Human Resources
+ +       0.7218 * (normalized) JobSatisfaction
+ +      -0.3807 * (normalized) MaritalStatus=Single
+ +       0.167  * (normalized) MaritalStatus=Married
+ +       0.2137 * (normalized) MaritalStatus=Divorced
+ +      -0.2924 * (normalized) MonthlyIncome
+ +      -0.0854 * (normalized) MonthlyRate
+ +      -0.8695 * (normalized) NumCompaniesWorked
+ +       1.1653 * (normalized) OverTime=No
+ +      -0.0323 * (normalized) PercentSalaryHike
+ +       0.0162 * (normalized) PerformanceRating
+ +       0.4441 * (normalized) RelationshipSatisfaction
+ +       0.3309 * (normalized) StockOptionLevel
+ +       1.3408 * (normalized) TotalWorkingYears
+ +       0.5487 * (normalized) TrainingTimesLastYear
+ +       0.4424 * (normalized) WorkLifeBalance
+ +      -0.4535 * (normalized) YearsAtCompany
+ +       0.8605 * (normalized) YearsInCurrentRole
+ +      -1.4199 * (normalized) YearsSinceLastPromotion
+ +       1.112  * (normalized) YearsWithCurrManager
+ -       1.8996
+
+Number of kernel evaluations: 798415 (83.681% cached)
+
+
+
+Time taken to build model: 0.48 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1290               87.7551 %
+Incorrectly Classified Instances       180               12.2449 %
+Kappa statistic                          0.4284
+Mean absolute error                      0.1224
+Root mean squared error                  0.3499
+Relative absolute error                 45.2157 %
+Root relative squared error             95.1558 %
+Total Number of Instances             1470     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.363    0.024    0.748      0.363    0.489      0.465    0.670     0.374     Yes
+                 0.976    0.637    0.889      0.976    0.930      0.465    0.670     0.887     No
+Weighted Avg.    0.878    0.538    0.866      0.878    0.859      0.465    0.670     0.805     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+   86  151 |    a = Yes
+   29 1204 |    b = No
+

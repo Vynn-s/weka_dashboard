@@ -20,6 +20,7 @@ The deployed site needs these files in the repository root:
 - `styles.css`
 - `script.js`
 - `model_metrics.json`
+- `IBM_HR_Attrition_Preprocessed.csv`
 
 The dashboard loads Chart.js from the CDN at `https://cdn.jsdelivr.net/npm/chart.js`.
 
@@ -51,7 +52,7 @@ If the repository already has a GitHub remote configured:
 
 ```bash
 git status
-git add index.html styles.css script.js model_metrics.json DEPLOYMENT.md .gitignore j48_output.txt randomforest_output.txt logistic_output.txt kmeans_output.txt employee_attrition.csv
+git add index.html styles.css script.js model_metrics.json DEPLOYMENT.md .gitignore IBM_HR_Attrition_Preprocessed.csv J48 RandomForest Logistic SMO NaiveBayes
 git commit -m "Prepare static WEKA dashboard for Vercel deployment"
 git push origin main
 ```
