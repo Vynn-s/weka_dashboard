@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEKA Model Evaluation Dashboard</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <div>
+        <strong>WEKA BI</strong>
+        <small>Model Evaluation</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#performance">Performance</a>
+      <a href="#visuals">Visualizations</a>
+      <a href="#details">Details</a>
+    </nav>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar" id="overview">
+      <div>
+        <p class="eyebrow">Machine Learning Analytics</p>
+        <h1>Employee Attrition Model Dashboard</h1>
+        <p class="subtitle">Evaluation metrics extracted from WEKA classifier and clustering outputs.</p>
+      </div>
+      <div class="controls">
+        <select id="modelSelect" aria-label="Select model"></select>
+        <button id="themeToggle" class="theme-toggle" type="button">Dark mode</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="overview-grid">
+        <article class="info-card"><span>Algorithm Used</span><strong id="algorithmName">-</strong></article>
+        <article class="info-card"><span>Dataset Name</span><strong id="datasetName">-</strong></article>
+        <article class="info-card"><span>Number of Instances</span><strong id="instances">-</strong></article>
+        <article class="info-card"><span>Number of Attributes</span><strong id="attributes">-</strong></article>
+      </section>
+
+      <section class="kpi-grid" id="performance"></section>
+
+      <section class="dashboard-grid" id="visuals">
+        <article class="panel gauge-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Accuracy</p>
+              <h2>Accuracy Gauge</h2>
+            </div>
+          </div>
+          <div class="gauge" id="accuracyGauge"><span>--</span></div>
+        </article>
+
+        <article class="panel wide">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Comparison</p>
+              <h2>Performance Comparison</h2>
+            </div>
+          </div>
+          <div class="chart-wrap"><canvas id="comparisonChart"></canvas></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Actual Classes</p>
+              <h2>Class Distribution</h2>
+            </div>
+          </div>
+          <div class="chart-wrap"><canvas id="classChart"></canvas></div>
+        </article>
+
+        <article class="panel wide">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Classification</p>
+              <h2>Confusion Matrix Heatmap</h2>
+            </div>
+          </div>
+          <div id="confusionMatrix" class="matrix"></div>
+        </article>
+      </section>
+
+      <section class="panel table-panel" id="details">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Extracted Metrics</p>
+            <h2>Model Performance Table</h2>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Algorithm</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 Score</th>
+                <th>ROC Area</th>
+                <th>Kappa</th>
+                <th>MAE</th>
+                <th>RMSE</th>
+              </tr>
+            </thead>
+            <tbody id="metricsTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="status" class="status">Loading model_metrics.json...</div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

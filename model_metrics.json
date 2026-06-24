@@ -1,0 +1,109 @@
+{
+  "dataset": {
+    "name": "WA_Fn-UseC_-HR-Employee-Attrition",
+    "instances": 1470,
+    "attributes": 31,
+    "className": "Attrition",
+    "classes": ["Yes", "No"]
+  },
+  "models": [
+    {
+      "id": "j48",
+      "algorithm": "J48 Decision Tree",
+      "scheme": "weka.classifiers.trees.J48 -C 0.25 -M 2",
+      "testMode": "10-fold cross-validation",
+      "buildTimeSeconds": 0.02,
+      "metrics": {
+        "accuracy": 83.8776,
+        "precision": null,
+        "recall": 0.839,
+        "f1Score": null,
+        "rocArea": 0.495,
+        "kappaStatistic": 0,
+        "meanAbsoluteError": 0.2705,
+        "rootMeanSquaredError": 0.3677
+      },
+      "classMetrics": [
+        { "className": "Yes", "tpRate": 0, "fpRate": 0, "precision": null, "recall": 0, "f1Score": null, "rocArea": 0.495, "prcArea": 0.160 },
+        { "className": "No", "tpRate": 1, "fpRate": 1, "precision": 0.839, "recall": 1, "f1Score": 0.912, "rocArea": 0.495, "prcArea": 0.837 }
+      ],
+      "confusionMatrix": {
+        "labels": ["Yes", "No"],
+        "matrix": [[0, 237], [0, 1233]]
+      }
+    },
+    {
+      "id": "randomforest",
+      "algorithm": "Random Forest",
+      "scheme": "weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1",
+      "testMode": "10-fold cross-validation",
+      "buildTimeSeconds": 0.28,
+      "metrics": {
+        "accuracy": 83.8776,
+        "precision": null,
+        "recall": 0.839,
+        "f1Score": null,
+        "rocArea": 0.627,
+        "kappaStatistic": 0,
+        "meanAbsoluteError": 0.2649,
+        "rootMeanSquaredError": 0.3621
+      },
+      "classMetrics": [
+        { "className": "Yes", "tpRate": 0, "fpRate": 0, "precision": null, "recall": 0, "f1Score": null, "rocArea": 0.627, "prcArea": 0.254 },
+        { "className": "No", "tpRate": 1, "fpRate": 1, "precision": 0.839, "recall": 1, "f1Score": 0.912, "rocArea": 0.627, "prcArea": 0.885 }
+      ],
+      "confusionMatrix": {
+        "labels": ["Yes", "No"],
+        "matrix": [[0, 237], [0, 1233]]
+      }
+    },
+    {
+      "id": "logistic",
+      "algorithm": "Logistic Regression",
+      "scheme": "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4",
+      "testMode": "10-fold cross-validation",
+      "buildTimeSeconds": 11.66,
+      "metrics": {
+        "accuracy": 81.9048,
+        "precision": 0.748,
+        "recall": 0.819,
+        "f1Score": 0.771,
+        "rocArea": 0.621,
+        "kappaStatistic": 0.0396,
+        "meanAbsoluteError": 0.1817,
+        "rootMeanSquaredError": 0.4181
+      },
+      "classMetrics": [
+        { "className": "Yes", "tpRate": 0.063, "fpRate": 0.036, "precision": 0.254, "recall": 0.063, "f1Score": 0.101, "rocArea": 0.621, "prcArea": 0.234 },
+        { "className": "No", "tpRate": 0.964, "fpRate": 0.937, "precision": 0.843, "recall": 0.964, "f1Score": 0.899, "rocArea": 0.621, "prcArea": 0.869 }
+      ],
+      "confusionMatrix": {
+        "labels": ["Yes", "No"],
+        "matrix": [[15, 222], [44, 1189]]
+      }
+    },
+    {
+      "id": "kmeans",
+      "algorithm": "Simple K-Means",
+      "scheme": "weka.clusterers.SimpleKMeans -N 2 -I 500 -S 10",
+      "testMode": "evaluate on training data",
+      "buildTimeSeconds": 0.03,
+      "metrics": {
+        "accuracy": null,
+        "precision": null,
+        "recall": null,
+        "f1Score": null,
+        "rocArea": null,
+        "kappaStatistic": null,
+        "meanAbsoluteError": null,
+        "rootMeanSquaredError": null,
+        "withinClusterSSE": 27783,
+        "iterations": 4
+      },
+      "clusterDistribution": [
+        { "cluster": "Cluster 0", "count": 887, "percentage": 60 },
+        { "cluster": "Cluster 1", "count": 583, "percentage": 40 }
+      ]
+    }
+  ]
+}
