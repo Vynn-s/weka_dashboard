@@ -16,6 +16,7 @@ const metricLabels = {
 
 document.addEventListener('DOMContentLoaded', () => {
   setupTheme();
+  setupExport();
   loadDashboard();
 });
 
@@ -29,10 +30,27 @@ async function loadDashboard() {
     renderModel(dashboardData.models[0]);
     renderComparison();
     renderMetricsTable();
+    revealDashboard();
     status.classList.add('hidden');
   } catch (error) {
     status.textContent = error.message;
   }
+}
+
+function setupExport() {
+  document.getElementById('exportPdf').addEventListener('click', () => {
+    document.body.classList.add('printing');
+    setTimeout(() => {
+      window.print();
+      document.body.classList.remove('printing');
+    }, 150);
+  });
+}
+
+function revealDashboard() {
+  document.querySelectorAll('.info-card, .kpi-card, .panel').forEach((element, index) => {
+    element.style.animationDelay = `${Math.min(index * 45, 420)}ms`;
+  });
 }
 
 function setupModelSelector() {

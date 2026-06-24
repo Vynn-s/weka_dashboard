@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEKA Model Evaluation Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
   <aside class="sidebar">
     <div class="brand">
       <span class="brand-mark"></span>
@@ -22,17 +27,22 @@
       <a href="#visuals">Visualizations</a>
       <a href="#details">Details</a>
     </nav>
+    <div class="sidebar-foot">
+      <span>Production Ready</span>
+      <strong>BI Report</strong>
+    </div>
   </aside>
 
-  <div class="app-shell">
+  <div class="app-shell" id="dashboardRoot">
     <header class="topbar" id="overview">
       <div>
         <p class="eyebrow">Machine Learning Analytics</p>
         <h1>Employee Attrition Model Dashboard</h1>
-        <p class="subtitle">Evaluation metrics extracted from WEKA classifier and clustering outputs.</p>
+        <p class="subtitle">Executive-ready evaluation metrics extracted from WEKA classifier outputs.</p>
       </div>
       <div class="controls">
         <select id="modelSelect" aria-label="Select model"></select>
+        <button id="exportPdf" class="primary-action" type="button">Export PDF</button>
         <button id="themeToggle" class="theme-toggle" type="button">Dark mode</button>
       </div>
     </header>
@@ -118,7 +128,10 @@
     </main>
   </div>
 
-  <div id="status" class="status">Loading model_metrics.json...</div>
+  <div id="status" class="status">
+    <span class="loader"></span>
+    <span>Loading model_metrics.json...</span>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>

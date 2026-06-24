@@ -1,0 +1,77 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     WA_Fn-UseC_-HR-Employee-Attrition-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R9-10,22,27-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    1470
+Attributes:   31
+              ﻿Age
+              Attrition
+              BusinessTravel
+              DailyRate
+              Department
+              DistanceFromHome
+              Education
+              EducationField
+              EnvironmentSatisfaction
+              Gender
+              HourlyRate
+              JobInvolvement
+              JobLevel
+              JobRole
+              JobSatisfaction
+              MaritalStatus
+              MonthlyIncome
+              MonthlyRate
+              NumCompaniesWorked
+              OverTime
+              PercentSalaryHike
+              PerformanceRating
+              RelationshipSatisfaction
+              StockOptionLevel
+              TotalWorkingYears
+              TrainingTimesLastYear
+              WorkLifeBalance
+              YearsAtCompany
+              YearsInCurrentRole
+              YearsSinceLastPromotion
+              YearsWithCurrManager
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: No (1470.0/237.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1233               83.8776 %
+Incorrectly Classified Instances       237               16.1224 %
+Kappa statistic                          0     
+Mean absolute error                      0.2705
+Root mean squared error                  0.3677
+Relative absolute error                 99.8721 %
+Root relative squared error             99.9999 %
+Total Number of Instances             1470     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.266    0.000    ?          0.000    ?          ?        0.495     0.160     Yes
+                 1.000    1.000    0.839      1.000    0.912      ?        0.495     0.837     No
+Weighted Avg.    0.839    0.839    ?          0.839    ?          ?        0.495     0.728     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+    0  237 |    a = Yes
+    0 1233 |    b = No
+
