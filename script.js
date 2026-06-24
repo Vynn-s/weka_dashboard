@@ -55,8 +55,31 @@ function revealDashboard() {
 
 function setupModelSelector() {
   const select = document.getElementById('modelSelect');
+  const tabs = document.getElementById('modelTabs');
   select.innerHTML = dashboardData.models.map(model => `<option value="${model.id}">${model.algorithm}</option>`).join('');
-  select.addEventListener('change', () => renderModel(dashboardData.models.find(model => model.id === select.value)));
+  tabs.innerHTML = dashboardData.models.map((model, index) => `
+    <button class="model-tab${index === 0 ? ' active' : ''}" type="button" role="tab" aria-selected="${index === 0}" data-model-id="${model.id}">
+      ${model.algorithm}
+    </button>
+  `).join('');
+
+  select.addEventListener('change', () => selectModel(select.value));
+  tabs.addEventListener('click', event => {
+    const tab = event.target.closest('.model-tab');
+    if (tab) selectModel(tab.dataset.modelId);
+  });
+}
+
+function selectModel(modelId) {
+  const model = dashboardData.models.find(item => item.id === modelId);
+  if (!model) return;
+  document.getElementById('modelSelect').value = modelId;
+  document.querySelectorAll('.model-tab').forEach(tab => {
+    const active = tab.dataset.modelId === modelId;
+    tab.classList.toggle('active', active);
+    tab.setAttribute('aria-selected', String(active));
+  });
+  renderModel(model);
 }
 
 function renderModel(model) {

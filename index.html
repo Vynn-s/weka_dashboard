@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
   <aside class="sidebar">
     <div class="brand">
       <span class="brand-mark"></span>
@@ -41,7 +39,11 @@
         <p class="subtitle">Executive-ready evaluation metrics extracted from WEKA classifier outputs.</p>
       </div>
       <div class="controls">
-        <select id="modelSelect" aria-label="Select model"></select>
+        <div class="model-picker" aria-label="Select model">
+          <span class="model-picker-label">Model</span>
+          <div id="modelTabs" class="model-tabs" role="tablist"></div>
+          <select id="modelSelect" aria-label="Select model"></select>
+        </div>
         <button id="exportPdf" class="primary-action" type="button">Export PDF</button>
         <button id="themeToggle" class="theme-toggle" type="button">Dark mode</button>
       </div>
